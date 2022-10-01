@@ -1,6 +1,7 @@
 {
   "name": "finger-js",
   "version": "0.1.0",
+  "author": "İnanç Akduvan",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
