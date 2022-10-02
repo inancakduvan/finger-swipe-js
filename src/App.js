@@ -1,11 +1,11 @@
 import './App.css';
-import FingerJs from './components/FingerJs';
+import FingerJs from 'finger-swipe-js';
 
 function App() {
   return (
     <div className="App">
       <FingerJs
-        direction='vertical'
+        direction='horizontal'
         onRight={() => {
           alert('hey right');
         }}
@@ -20,7 +20,7 @@ function App() {
         }}
       >
         <div className='App'>
-          sada
+          Swipe Horizontal 
         </div>
       </FingerJs>
     </div>
