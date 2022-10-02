@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <FingerJs
-        direction='horizontal'
+        direction='vertical'
         onRight={() => {
           alert('hey right');
         }}
