@@ -1,7 +1,10 @@
 import './App.css';
 import FingerJs from 'finger-swipe-js';
+import { useState } from 'react';
 
 function App() {
+  const [text, setText] = useState('Swipe vertically');
+
   return (
     <div className="App">
       <FingerJs
@@ -13,14 +16,14 @@ function App() {
           alert('hey left!')
         }}
         onUp={() => {
-          alert('hey up!')
+          setText('Swiped up');
         }}
         onDown={() => {
-          alert('hey down!')
+          setText('Swiped down');
         }}
       >
         <div className='App'>
-          Swipe Horizontal 
+          {text}
         </div>
       </FingerJs>
     </div>
