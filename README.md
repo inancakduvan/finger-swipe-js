@@ -98,5 +98,9 @@ import Finger Swipe Js into your file.
   ```
   
   <img src='https://res.cloudinary.com/dd2ownqt9/image/upload/v1664810036/ezgif.com-gif-maker_ex94ro.gif' />
+  
+  <video controls='false' autoplay>
+    <source src='https://res.cloudinary.com/dd2ownqt9/video/upload/v1664809947/WhatsApp_Video_2022-10-03_at_18.10.46_z6maqq.mp4' type=''video/mp4 />
+  </video>
 
 <h2>Done!!</h2>
