@@ -1,10 +1,22 @@
 import './App.css';
 import FingerJs from 'finger-swipe-js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [textVertical, setTextVertical] = useState('Swipe vertically');
   const [textHorizontal, setTextHorizontal] = useState('Swipe horizontally');
+
+  const [hasAnimation, setHasAnimation] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
+
+  useEffect(() => {
+    if(hasAnimation) {
+      const timeout = setTimeout(() => {
+        setIsDeleted(true);
+        clearTimeout(timeout);
+      }, 1000)
+    }
+  }, [hasAnimation])
 
   return (
     <div className="App">
@@ -39,6 +51,21 @@ function App() {
           {textHorizontal}
         </div>
       </FingerJs>
+
+      {
+        !isDeleted &&
+        <FingerJs
+          direction='horizontal'
+          style={{width: '100%'}}
+          onLeft={() => {
+            setHasAnimation(true);
+          }}
+        >
+          <div className={'demo-container-delete ' + (hasAnimation ? 'animating' : '')}>
+            Swipe left to delete me!
+          </div>
+        </FingerJs>
+      }
     </div>
   );
 }
