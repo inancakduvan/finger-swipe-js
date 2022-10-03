@@ -9,6 +9,7 @@
 # How to install
 
 <h3>NPM<h3>
+
 <pre>npm install finger-swipe-js</pre>
 
 ## Usage
