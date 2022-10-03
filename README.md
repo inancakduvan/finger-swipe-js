@@ -68,7 +68,7 @@ import Finger Swipe Js into your file.
 </table>
 
 <h3>Example</h3>
-<pre>
+```JSX
   import { useEffect, useState } from 'react';
   import FingerSwipe from 'finger-swipe-js';
   
