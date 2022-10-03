@@ -1,11 +1,11 @@
 import './App.css';
-import FingerJs from 'finger-swipe-js';
+import FingerSwipe from 'finger-swipe-js';
 import { useEffect, useState } from 'react';
 
 const Modal = ({setIsModalOpen}) => {
   return (
     <div className='modal'>
-      <FingerJs
+      <FingerSwipe
         direction='vertical'
         style={{width: '100%'}}
         onDown={() => {
@@ -15,7 +15,7 @@ const Modal = ({setIsModalOpen}) => {
         <div className='inner'>
             Swipe down to close the modal!
         </div>
-      </FingerJs>
+      </FingerSwipe>
     </div>
   )
 }
@@ -67,7 +67,7 @@ function App() {
         !isMobile && <DesktopWarning />
       }
 
-      <FingerJs
+      <FingerSwipe
         direction='vertical'
         style={{width: '100%'}}
         onUp={() => {
@@ -80,9 +80,9 @@ function App() {
         <div className='demo-container-vertical'>
           {textVertical}
         </div>
-      </FingerJs>
+      </FingerSwipe>
 
-      <FingerJs
+      <FingerSwipe
         direction='horizontal'
         style={{width: '100%'}}
         onRight={() => {
@@ -95,11 +95,11 @@ function App() {
         <div className='demo-container-horizontal'>
           {textHorizontal}
         </div>
-      </FingerJs>
+      </FingerSwipe>
 
       {
         !isDeleted &&
-        <FingerJs
+        <FingerSwipe
           direction='horizontal'
           style={{width: '100%'}}
           onLeft={() => {
@@ -109,10 +109,10 @@ function App() {
           <div className={'demo-container-delete ' + (hasAnimation ? 'animating' : '')}>
             Swipe left to delete me!
           </div>
-        </FingerJs>
+        </FingerSwipe>
       }
 
-        <FingerJs
+        <FingerSwipe
           direction='vertical'
           style={{width: '100%'}}
           onUp={() => {
@@ -122,7 +122,7 @@ function App() {
           <div className='demo-container-modal'>
             Swipe up to open a modal!
           </div>
-        </FingerJs>
+        </FingerSwipe>
 
         {
           isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />

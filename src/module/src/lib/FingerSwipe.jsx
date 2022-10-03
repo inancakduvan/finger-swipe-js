@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const FingerJs = ({
+const FingerSwipe = ({
   children,
   style={},
   direction="horizontal",
@@ -14,22 +14,16 @@ const FingerJs = ({
     const [finalPosition, setFinalPosition] = useState(0);
   
     const onTouchStart = (event) => {
-      event.preventDefault();
-
       const position = direction === 'horizontal' ? event.touches[0].clientX : event.touches[0].clientY;
       setInitialPosition(position);
     }
   
     const onTouchMove = (event) => {
-      event.preventDefault();
-
       const position = direction === 'horizontal' ? event.touches[0].clientX : event.touches[0].clientY;
       setFinalPosition(position);
     }
   
-    const onTouchEnd = (event) => {
-      event.preventDefault();
-
+    const onTouchEnd = () => {
       if(finalPosition !== 0) {
             if(initialPosition - finalPosition < -motionSensivity) {
                 (direction === 'horizontal') ? onRight() : onDown();
@@ -55,4 +49,4 @@ const FingerJs = ({
     )
 }
 
-export default FingerJs;
+export default FingerSwipe;
