@@ -14,7 +14,7 @@ function App() {
       const timeout = setTimeout(() => {
         setIsDeleted(true);
         clearTimeout(timeout);
-      }, 1000)
+      }, 650)
     }
   }, [hasAnimation])
 

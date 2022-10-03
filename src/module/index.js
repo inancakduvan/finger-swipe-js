@@ -60,7 +60,7 @@ const FingerJs = _ref => {
     style: style
   }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      touchAction: 'none'
+      touchAction: direction === 'horizontal' ? 'pan-y' : 'pan-x'
     }
   }, children));
 };

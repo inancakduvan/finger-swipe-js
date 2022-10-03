@@ -1,6 +1,6 @@
 {
   "name": "finger-swipe-js",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Trigger any function on swipe!",
   "main": "index.js",
   "scripts": {

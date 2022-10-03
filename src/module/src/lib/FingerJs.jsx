@@ -48,7 +48,7 @@ const FingerJs = ({
         onTouchEnd={onTouchEnd}
         style={style}
       >
-        <div style={{touchAction: 'none'}}>
+        <div style={{touchAction: direction === 'horizontal' ? 'pan-y' : 'pan-x'}}>
           {children}
         </div>
       </div>
