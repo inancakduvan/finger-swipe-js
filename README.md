@@ -25,48 +25,48 @@ import Finger Swipe Js into your file.
 <table>
   <tr>
     <td></td>
-    <td>Type</td>
-    <td>Description</td>
+    <td><b>Type</b></td>
+    <td><b>Description</b></td>
   </tr>
   
    <tr>
-    <td>direction</td>
+    <td><b>direction</b></td>
     <td>horizontal / vertical</td>
     <td>Declare on which direction callbacks will be triggered.</td>
   </tr>
   
    <tr>
-    <td>motionSensivity</td>
+     <td><b>motionSensivity</b></td>
     <td>number</td>
     <td>How much pixels you need to swipe your finger to trigger callback. Default is 50.</td>
   </tr>
   
    <tr>
-    <td>style</td>
+    <td><b>style</b></td>
     <td>object</td>
     <td>Add style to container</td>
   </tr>
   
    <tr>
-    <td>onLeft</td>
+     <td><b>onLeft</b></td>
     <td>function</td>
     <td>Callback function to trigger on swipe left.</td>
   </tr>
   
    <tr>
-    <td>onRight</td>
+    <td><b>onRight</b></td>
     <td>function</td>
     <td>Callback function to trigger on swipe right.</td>
   </tr>
   
    <tr>
-    <td>onUp</td>
+    <td><b>onUp</b></td>
     <td>function</td>
     <td>Callback function to trigger on swipe up.</td>
   </tr>
   
    <tr>
-    <td>onDown</td>
+    <td><b>onDown</b></td>
     <td>function</td>
     <td>Callback function to trigger on swipe down.</td>
   </tr>
@@ -98,9 +98,5 @@ import Finger Swipe Js into your file.
   ```
   
   <img src='https://res.cloudinary.com/dd2ownqt9/image/upload/v1664810036/ezgif.com-gif-maker_ex94ro.gif' />
-  
-  <video controls='false' autoplay>
-    <source src='https://res.cloudinary.com/dd2ownqt9/video/upload/v1664809947/WhatsApp_Video_2022-10-03_at_18.10.46_z6maqq.mp4' type=''video/mp4 />
-  </video>
 
 <h2>Done!!</h2>
