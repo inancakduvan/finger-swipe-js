@@ -68,7 +68,7 @@ import Finger Swipe Js into your file.
 </table>
 
 <h3>Example</h3>
-```JSX
+<pre>
   import { useEffect, useState } from 'react';
   import FingerSwipe from 'finger-swipe-js';
   
@@ -90,5 +90,28 @@ import Finger Swipe Js into your file.
   
   export default App;
 </pre>
+  
+ ```JSX
+  import { useEffect, useState } from 'react';
+  import FingerSwipe from 'finger-swipe-js';
+  
+  const App = () => {
+      return (
+        <FingerSwipe
+          direction='horizontal'
+          style={{width: '100%'}}
+          onLeft={() => {
+            console.log('deleted!');
+          }}
+        >
+          <div className='demo-container-delete'>
+            Swipe left to delete me!
+          </div>
+        </FingerSwipe>
+      )
+  }
+  
+  export default App;
+  ```
 
 <h2>Done!!</h2>
