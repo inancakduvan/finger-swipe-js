@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <FingerJs
         direction='vertical'
+        style={{width: '100%'}}
         onRight={() => {
           setText('Swiped right')
         }}

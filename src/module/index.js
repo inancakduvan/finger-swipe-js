@@ -16,6 +16,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 const FingerJs = _ref => {
   let {
     children,
+    style = {},
     direction = "horizontal",
     motionSensivity = 50,
     onLeft = () => null,
@@ -27,16 +28,20 @@ const FingerJs = _ref => {
   const [finalPosition, setFinalPosition] = (0, _react.useState)(0);
 
   const onTouchStart = event => {
+    event.preventDefault();
     const position = direction === 'horizontal' ? event.touches[0].clientX : event.touches[0].clientY;
     setInitialPosition(position);
   };
 
   const onTouchMove = event => {
+    event.preventDefault();
     const position = direction === 'horizontal' ? event.touches[0].clientX : event.touches[0].clientY;
     setFinalPosition(position);
   };
 
-  const onTouchEnd = () => {
+  const onTouchEnd = event => {
+    event.preventDefault();
+
     if (finalPosition !== 0) {
       if (initialPosition - finalPosition < -motionSensivity) {
         direction === 'horizontal' ? onRight() : onDown();
@@ -51,8 +56,13 @@ const FingerJs = _ref => {
   return /*#__PURE__*/_react.default.createElement("div", {
     onTouchStart: onTouchStart,
     onTouchMove: onTouchMove,
-    onTouchEnd: onTouchEnd
-  }, children);
+    onTouchEnd: onTouchEnd,
+    style: style
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      touchAction: 'none'
+    }
+  }, children));
 };
 
 var _default = FingerJs;
