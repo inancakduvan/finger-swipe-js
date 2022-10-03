@@ -4,7 +4,7 @@
 <p> Works only mobile devices. </p>
 
 ## Try live demo:
-<p>Demo: https://inancakduvan.github.io/fingerswipe/ </p>
+<p>https://finger-swipe-js.vercel.app </p>
 
 # How to install
 
