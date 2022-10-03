@@ -96,5 +96,7 @@ import Finger Swipe Js into your file.
   
   export default App;
   ```
+  
+  <img src='https://res.cloudinary.com/dd2ownqt9/image/upload/v1664810036/ezgif.com-gif-maker_ex94ro.gif' />
 
 <h2>Done!!</h2>
