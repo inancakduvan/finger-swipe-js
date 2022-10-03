@@ -10,7 +10,9 @@
 
 <h3>NPM<h3>
 
-<pre>npm install finger-swipe-js</pre>
+``` JSX
+  npm install finger-swipe-js
+```  
 
 ## Usage
 import Finger Swipe Js into your file.
