@@ -1,11 +1,6 @@
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 150vh;
   width: 100%;
-  background-color: beige;
+  padding: 16px;
 }
 
 .App-logo {
@@ -43,8 +38,26 @@
   }
 }
 
-.demo-container {
+.demo-container-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  font-size: 1.25rem;
   width: 100%;
-  height: 400px;
-  background: cadetblue;
+  height: 200px;
+  border-radius: 8px;
+  background: #ccd5ae;
+}
+
+.demo-container-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  font-size: 1.25rem;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  background: #d4a373;
 }
