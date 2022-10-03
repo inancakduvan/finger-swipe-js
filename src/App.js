@@ -2,12 +2,32 @@ import './App.css';
 import FingerJs from 'finger-swipe-js';
 import { useEffect, useState } from 'react';
 
+const Modal = ({setIsModalOpen}) => {
+  return (
+    <div className='modal'>
+      <FingerJs
+        direction='vertical'
+        style={{width: '100%'}}
+        onDown={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        <div className='inner'>
+            Swipe down to close the modal!
+        </div>
+      </FingerJs>
+    </div>
+  )
+}
+
 function App() {
   const [textVertical, setTextVertical] = useState('Swipe vertically');
   const [textHorizontal, setTextHorizontal] = useState('Swipe horizontally');
 
   const [hasAnimation, setHasAnimation] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if(hasAnimation) {
@@ -66,6 +86,22 @@ function App() {
           </div>
         </FingerJs>
       }
+
+        <FingerJs
+          direction='vertical'
+          style={{width: '100%'}}
+          onUp={() => {
+            setIsModalOpen(true);
+          }}
+        >
+          <div className='demo-container-modal'>
+            Swipe up to open a modal!
+          </div>
+        </FingerJs>
+
+        {
+          isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />
+        }
     </div>
   );
 }
