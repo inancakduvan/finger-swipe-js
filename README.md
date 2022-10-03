@@ -68,9 +68,26 @@ import Finger Swipe Js into your file.
 
 <h3>Example</h3>
 <pre>
-  <script>
-       
-  </script>
+  import { useEffect, useState } from 'react';
+  import FingerSwipe from 'finger-swipe-js';
+  
+  const App = () => {
+      return (
+        <FingerSwipe
+          direction='horizontal'
+          style={{width: '100%'}}
+          onLeft={() => {
+            console.log('deleted!');
+          }}
+        >
+          <div className='demo-container-delete'>
+            Swipe left to delete me!
+          </div>
+        </FingerSwipe>
+      )
+  }
+  
+  export default App;
 </pre>
 
 <h2>Done!!</h2>
